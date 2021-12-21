@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="css/extend.css">
+</head>
+<body class="font-primary">
+    <header class="relative before:absolute before:inset-0 bg-header-dashboard shadow-iner-h z-40">
+        <div class="container max-w-desktop mx-auto relative">
+            <div class="flex justify-between items-center px-14 py-5 text-white">
+                <div class="left">
+                    <div class="flex items-center">
+                        <div class="logo">
+                            <a href="">
+                                <img src="img/header/logo/logo.svg" alt="Logo">
+                            </a>
+                        </div>
+
+                        <input type="text" name="search" placeholder="search item heare..." class="search w-60 rounded-full pl-5 py-3 ml-6 bg-transparent placeholder-white w-search" style="background-color: #353535;">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="flex items-center">
+                        <ul class="flex space-x-2">
+                            <li><a href="">Marketplace</a></li><span>|</span>
+                            <li><a href="">Documents</a></li><span>|</span>
+                            <li><a href="">Community</a></li><span>|</span>
+                            <li><a href="">Create</a></li>
+                        </ul>
+
+                        <ul class="flex items-center ml-32 space-x-16">
+                            <li><a href="">Profile</a></li>
+                            <li>
+                                <a href="" class="">
+                                    <img src="img/dashboard/Wallet_ico.svg" alt="Wallet icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-secondary">
+        <div class="container xl:max-w-desktop mx-auto" >
+            <div class="flex">
+                <aside class="w-80 py-14 pl-14 shadow-box text-sm relative before:absolute before:inset-0 before:iner-side bg-aside z-10">
+                    <div class="text-gray-10 space-y-10 relative">
+                        <div>
+                            <h2 class="text-white text-lg font-semibold mb-10">Your Profile</h2>
+            
+                            <ul class="space-y-2">
+                                <li><a href="" class="text-blue-10 font-medium">Edit Profile</a></li>
+                                <li><a href=""></a>KYC</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-white text-lg font-semibold mb-10">Copyrights</h2>
+            
+                            <ul class="space-y-2">
+                                <li><a href="">Create</a></li>
+                                <li><a href="">Register at official office</a></li>
+                                <li><a href="">Copyrights item</a></li>
+                                <li><a href="">favorites</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-white text-lg font-semibold mb-10">NFTs</h2>
+            
+                            <ul class="space-y-2">
+                                <li><a href="">Mint</a></li>
+                                <li><a href="">Your NTFs on sale</a></li>
+                                <li><a href="">Owned NTFs</a></li>
+                                <li><a href="">Favorites</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-white text-lg font-semibold mb-10">Social</h2>
+            
+                            <ul class="space-y-2">
+                                <li><a href="">linked</a></li>
+                                <li><a href="">Follovers</a></li>
+                                <li><a href="">Following</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="space-y-2 text-white font-bold text-lg">
+                                <li><a href="">Activity</a></li>
+                                <li><a href="">Referals</a></li>
+                                <li><a href="">Documencation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+        
+                <div class="main w-full flex pt-20 shadow-box bg-body relative before:absolute before:inset-0 before:iner-side z-0">
+                    <form action="" class="w-full relative text-white">
+                        <div class="flex w-full">
+                            <div class="left w-2/3 pl-20 space-y-4" >
+                                <div>
+                                    <label for="" class="text-white font-bold" >Display name</label><br>
+                                    <input type="text" name="" id="" placeholder="enter Your display name..." class="w-full py-2 rounded-lg bg-dashboard-input pl-3 m-0 mt-2 italic placeholder:text-gray-20">
+                                </div>
+                                <div>
+                                    <label for="" class="text-white font-bold" >Custom URL</label><br>
+                                    <input type="text" name="" id="" placeholder="enter Your custom url..." class="w-full py-2 rounded-lg bg-dashboard-input pl-3 m-0 mt-2 italic placeholder:text-gray-20">
+                                </div>
+                                <div>
+                                    <label for="" class="text-white font-bold" >Bio</label><br>
+                                    <input type="text" name="" id="" placeholder="tell about yourself in few words" class="w-full py-2 rounded-lg bg-dashboard-input pl-3 m-0 mt-2 italic placeholder:text-gray-20">
+                                </div>
+                                <div>
+                                    <label for="" class="text-white font-bold" >Twitter Username</label><br>
+                                    <input type="text" name="" id="" placeholder="link your twitter account to gain more trust in marketplace" class="w-full py-2 rounded-lg bg-dashboard-input pl-3 m-0 mt-2 italic placeholder:text-gray-20">
+                                </div>
+                                <div>
+                                    <label for="" class="text-white font-bold" >Personal website or portfolio</label><br>
+                                    <input type="text" name="" id="" placeholder="HTTPs://" class="w-full py-2 rounded-lg bg-dashboard-input pl-3 m-0 mt-2 italic placeholder:text-gray-20">
+                                </div>
+                                <div>
+                                    <label for="" class="text-white font-bold" >Email address</label><br>
+                                    <input type="text" name="" id="" placeholder="your email address for notifications from marketpalce" class="w-full py-2 rounded-lg bg-dashboard-input pl-3 m-0 mt-2 italic placeholder:text-gray-20">
+                                </div>
+                                <div class="text-right pt-10">
+                                    <input type="submit" value="Save Changes" class="py-3 px-6 bg-blue-10 text-white rounded-xl" >
+                                </div>
+                            </div>
+                            <div class="right w-1/3">
+                                <div class="profile flex flex-col items-center">
+                                    <div style="width: 125px; height: 125px; border-radius: 50%; background: white;">
+                                        
+                                    </div>
+                                    
+                                    <label class="custom-file-upload border-2 border-blue-400 px-10 py-2 rounded-full mt-5">
+                                        <input type="file" class="hidden"/>
+                                        Chose file
+                                    </label>
+                                    
+                                    <p class="text-gray-30 text-center px-10 mt-5">
+                                        we recommend an image at least 400px by 400px width and height GIF won’t work.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top pt-16 pb-12 relative before:absolute before:inset-0 before:shadow-iner bg-footer z-10">
+            <div class="container max-w-desktop mx-auto px-14">
+                <div class="grid grid-cols-4 relative z-40">
+                    <div class="">
+                        <h2 class="text-white text-xl font-semibold mb-10">Marketplace</h2>
+                        <ul class="text-gray-400 space-y-4">
+                            <li><a href="">All NFTs</a></li>
+                            <li><a href="">Art</a></li>
+                            <li><a href="">Music</a></li>
+                            <li><a href="">Domain Names</a></li>
+                            <li><a href="">Virtual World</a></li>
+                            <li><a href="">Collectibles</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h2 class="text-white text-xl font-semibold mb-10">Resources</h2>
+                        <ul class="text-gray-400 space-y-4">
+                            <li><a href="">Help Center</a></li>
+                            <li><a href="">Partners</a></li>
+                            <li><a href="">Suggestions</a></li>
+                            <li><a href="">Discord</a></li>
+                            <li><a href="">Docs</a></li>
+                            <li><a href="">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h2 class="text-white text-xl font-semibold mb-10">Community</h2>
+                        <ul class="text-gray-400 space-y-4">
+                            <li><a href="">Community</a></li>
+                            <li><a href="">Documentation</a></li>
+                            <li><a href="">Brand Assets</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Forum</a></li>
+                            <li><a href="">Mailing List</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <div class="space-y-4">
+                            <h2 class="text-white text-xl font-semibold mb-10">Newsletter</h2>
+                            <p class="text-gray-400">
+                                Signup for our newsletter to get the latest news in your inbox.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex h-10">
+                                    <input type="text" name="email" id="email" placeholder="enter your email" class="w-4/6 rounded-l-full focus:outline-none p-3 bg-gray-70 placeholder:text-white">
+                                    <div class="arrow w-2/6 flex justify-center items-center bg-blue-400 rounded-r-full">
+                                        <img src="img/footer/Shape 4.svg" alt="arrow">
+                                    </div>
+                                </div>
+                                <p class="text-gray-400">
+                                    Your email is safe with us. We don't spam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom bg-secondary shadow-iner">
+            <div class="container max-w-desktop mx-auto px-14">
+                <div class="py-10 text-gray-400">
+                    <p>© Copyright 2021 - Prometheus.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

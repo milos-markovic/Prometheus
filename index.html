@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoteus</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="css/extend.css">
+
+    <!-- swiper carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</head>
+<body class="font-primary">
+    <header class="relative before:absolute before:inset-0 before:bg-black before:opacity-60">
+        <div class="background grid grid-cols-5">
+            <div style="height: 405px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 11.png" alt="">
+            </div>
+            <div style="height: 405px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 8.png" alt="">
+            </div>
+            <div style="height: 405px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 7.png" alt="">
+            </div>
+            <div style="height: 405px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 3.png" alt="">
+            </div>
+            <div style="height: 405px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 4.png" alt="">
+            </div>
+            <div style="height: 496px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 10.png" alt="">
+            </div>
+            <div style="height: 496px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 2.png" alt="">
+            </div>
+            <div style="height: 496px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 5.png" alt="">
+            </div>
+            <div style="height: 496px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 12.png" alt="">
+            </div>
+            <div style="height: 496px;">
+                <img class="h-full w-full object-cover" src="img/header/Layer 9.png" alt="">
+            </div>
+        </div>
+
+        <div class="absolute top-5 left-0 w-full z-40" >
+            <div class="container max-w-desktop mx-auto">
+                <nav id="nav" class="flex justify-between items-center pl-14 pr-6">
+                    <div class="left flex">
+                        <div class="logo">
+                            <a href="">
+                                <img src="img/header/logo/logo.svg" alt="Logo">
+                            </a>
+                        </div>
+    
+                        <input type="text" name="search" placeholder="search item heare..." class="search w-60 rounded-full pl-5 py-3 ml-6 bg-transparent placeholder-white w-search" style="background-color: #353535;">
+                    </div>
+    
+                    <div class="right flex text-white">
+                        <div class="nav">
+                            <ul class="flex space-x-2">
+                                <li><a href="">Marketplace</a></li><span>|</span>
+                                <li><a href="">Documents</a></li><span>|</span>
+                                <li><a href="">Community</a></li><span>|</span>
+                                <li><a href="">Create</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="login ml-32">
+                            <ul class="flex space-x-6">
+                                <li><a href="">Profile</a></li>
+                                <li><a href="" class="bg-blue-10 px-4 py-2 text-white rounded-full" >Connect Wallet</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            
+                <section id="top" class="flex items-center mt-24 px-14">
+                    <div class="text flex flex-col w-120 h-84">
+                        <h2 class="text-2xl font-bold text-blue-10">NFTs Marketplace</h2>
+                        <h1 class="text-5xl font-bold text-white mt-10 test">Discover <span class="text-blue-10">artworks</span>, collect,<br> and sell extraordinary NFTs</h1>
+                        <p class="text-white text-xl mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br> do eiusmod tempor incididunt ut labore et dolore magna<br> aliqua. Quis ipsum suspendisse ultrices gravida. Risus<br> commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        
+                        <div class="space-x-2 mt-auto">
+                            <a href="" class="px-8 py-2 text-white bg-blue-10 rounded-lg">Explore</a>
+                            <a href="" class="text-white bg-transparent text-white border border-blue-400 px-8 py-2 rounded-lg">Create</a>
+                        </div>
+                    </div>
+    
+                    <div class="bg-image relative rounded-lg w-120 h-120 ml-14 shadow-box"  >
+                        <div class="absolute top-10 left-10 z-10 text-white">
+                            <h2 class="m-0 p-0 text-2xl font-semibold">Art Name</h2>
+                            <h3 class="m-0 p-0 text-sm text-gray-30 font-semibold">Artist Name</h3>
+                        </div>
+
+                        <img src="img/header/art_name/Layer 1.png" alt="" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl shadow-box">
+                        
+                        <!-- <img class="icon_play" src="img/header/art name/icon play.svg" alt=""> -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="top-gradient"></div>
+        <div class="bottom-gradient"></div>
+    </header>
+
+    <main >
+        <div class="bg-secondary">
+            <section id="new_items" class="py-10">
+                <div class="container max-w-desktop mx-auto px-14">
+    
+                    <h2 class="text-white font-bold text-2xl mb-10">New Items</h2>
+    
+                    <div class="grid grid-cols-4 gap-6">
+                        <div class="el h-items-card-h relative flex flex-col justify-between rounded-xl pt-7 pb-9 before:absolute before:inset-0 before:shadow-iner before:rounded-xl shadow-box bg-secondary bg-card" >
+                            <div class="top bg-gray-50 h-64 mx-6 relative shadow-img-box rounded-xl">
+                                <img src="img/header/Layer 3.png" alt="layer 14" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl">
+                            </div>
+                
+                            <div class="bottom px-6 font-semibold space-y-2 text-lg">
+                                <h3 class="text-white">Items Name</h3>
+                                <h4 class="text-gray-400">0.00 ETH</h4>
+                                <div class="flex justify-between">
+                                    <a href="" class="text-blue-10">Place a bid</a>
+                                    <div class="like flex items-center space-x-2">
+                                        <a href="" >
+                                            <img src="img/new items/Like 1.png" alt="hart" class="w-5 h-5">
+                                        </a>
+                                        <a href="" class="text-white font-semibold">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="elipse h-12 w-12 bg-white rounded-full absolute top-3 left-4">
+                                <div class="elipse_img"></div>
+                                <img class="small_elipse absolute bottom-0 right-0" src="img/new items/Ellipse 1.png" alt="small elipse">
+                            </div>
+                
+                            <div class="time border border-blue-400 flex items-center justify-center w-36 h-8 rounded-full text-white font-semibold absolute top-3 right-6 z-10" style="background: #232323;">
+                                2d 19h 30m 12s
+                            </div>
+                        </div>
+                        <div class="el h-items-card-h relative flex flex-col justify-between rounded-xl pt-7 pb-9 before:absolute before:inset-0 before:shadow-iner before:rounded-xl shadow-box bg-secondary bg-card" >
+                            <div class="top bg-gray-50 h-64 mx-6 relative shadow-img-box rounded-xl">
+                                <img src="img/header/Layer 3.png" alt="layer 14" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl">
+                            </div>
+                
+                            <div class="bottom px-6 font-semibold space-y-2 text-lg">
+                                <h3 class="text-white">Items Name</h3>
+                                <h4 class="text-gray-400">0.00 ETH</h4>
+                                <div class="flex justify-between">
+                                    <a href="" class="text-blue-10">Place a bid</a>
+                                    <div class="like flex items-center space-x-2">
+                                        <a href="" >
+                                            <img src="img/new items/Like 1.png" alt="hart" class="w-5 h-5">
+                                        </a>
+                                        <a href="" class="text-white font-semibold">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="elipse h-12 w-12 bg-white rounded-full absolute top-3 left-4">
+                                <div class="elipse_img"></div>
+                                <img class="small_elipse absolute bottom-0 right-0" src="img/new items/Ellipse 1.png" alt="small elipse">
+                            </div>
+                
+                            <div class="time border border-blue-400 flex items-center justify-center w-36 h-8 rounded-full text-white font-semibold absolute top-3 right-6 z-10" style="background: #232323;">
+                                2d 19h 30m 12s
+                            </div>
+                        </div>
+                        <div class="el h-items-card-h relative flex flex-col justify-between rounded-xl pt-7 pb-9 before:absolute before:inset-0 before:shadow-iner before:rounded-xl shadow-box bg-secondary bg-card" >
+                            <div class="top bg-gray-50 h-64 mx-6 relative shadow-img-box rounded-xl">
+                                <!-- <img src="img/header/Layer 3.png" alt="layer 14" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl"> -->
+                            </div>
+                
+                            <div class="bottom px-6 font-semibold space-y-2 text-lg">
+                                <h3 class="text-white">Items Name</h3>
+                                <h4 class="text-gray-400">0.00 ETH</h4>
+                                <div class="flex justify-between">
+                                    <a href="" class="text-blue-10">Place a bid</a>
+                                    <div class="like flex items-center space-x-2">
+                                        <a href="" >
+                                            <img src="img/new items/Like 1.png" alt="hart" class="w-5 h-5">
+                                        </a>
+                                        <a href="" class="text-white font-semibold">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="elipse h-12 w-12 bg-white rounded-full absolute top-3 left-4">
+                                <div class="elipse_img"></div>
+                                <img class="small_elipse absolute bottom-0 right-0" src="img/new items/Ellipse 1.png" alt="small elipse">
+                            </div>
+                
+                            <div class="time border border-blue-400 flex items-center justify-center w-36 h-8 rounded-full text-white font-semibold absolute top-3 right-6 z-10" style="background: #232323;">
+                                2d 19h 30m 12s
+                            </div>
+                        </div>
+                        <div class="el h-items-card-h relative flex flex-col justify-between rounded-xl pt-7 pb-9 before:absolute before:inset-0 before:shadow-iner before:rounded-xl shadow-box bg-secondary bg-card" >
+                            <div class="top bg-gray-50 h-64 mx-6 relative shadow-img-box rounded-xl">
+                                <!-- <img src="img/header/Layer 3.png" alt="layer 14" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl"> -->
+                            </div>
+                
+                            <div class="bottom px-6 font-semibold space-y-2 text-lg">
+                                <h3 class="text-white">Items Name</h3>
+                                <h4 class="text-gray-400">0.00 ETH</h4>
+                                <div class="flex justify-between">
+                                    <a href="" class="text-blue-10">Place a bid</a>
+                                    <div class="like flex items-center space-x-2">
+                                        <a href="" >
+                                            <img src="img/new items/Like 1.png" alt="hart" class="w-5 h-5">
+                                        </a>
+                                        <a href="" class="text-white font-semibold">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="elipse h-12 w-12 bg-white rounded-full absolute top-3 left-4">
+                                <div class="elipse_img"></div>
+                                <img class="small_elipse absolute bottom-0 right-0" src="img/new items/Ellipse 1.png" alt="small elipse">
+                            </div>
+                
+                            <div class="time border border-blue-400 flex items-center justify-center w-36 h-8 rounded-full text-white font-semibold absolute top-3 right-6 z-10" style="background: #232323;">
+                                2d 19h 30m 12s
+                            </div>
+                        </div>
+                        <div class="el h-items-card-h relative flex flex-col justify-between rounded-xl pt-7 pb-9 before:absolute before:inset-0 before:shadow-iner before:rounded-xl shadow-box bg-secondary bg-card" >
+                            <div class="top bg-gray-50 h-64 mx-6 relative shadow-img-box rounded-xl">
+                                <!-- <img src="img/header/Layer 3.png" alt="layer 14" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl"> -->
+                            </div>
+                
+                            <div class="bottom px-6 font-semibold space-y-2 text-lg">
+                                <h3 class="text-white">Items Name</h3>
+                                <h4 class="text-gray-400">0.00 ETH</h4>
+                                <div class="flex justify-between">
+                                    <a href="" class="text-blue-10">Place a bid</a>
+                                    <div class="like flex items-center space-x-2">
+                                        <a href="" >
+                                            <img src="img/new items/Like 1.png" alt="hart" class="w-5 h-5">
+                                        </a>
+                                        <a href="" class="text-white font-semibold">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="elipse h-12 w-12 bg-white rounded-full absolute top-3 left-4">
+                                <div class="elipse_img"></div>
+                                <img class="small_elipse absolute bottom-0 right-0" src="img/new items/Ellipse 1.png" alt="small elipse">
+                            </div>
+                
+                            <div class="time border border-blue-400 flex items-center justify-center w-36 h-8 rounded-full text-white font-semibold absolute top-3 right-6 z-10" style="background: #232323;">
+                                2d 19h 30m 12s
+                            </div>
+                        </div>
+                        <div class="el h-items-card-h relative flex flex-col justify-between rounded-xl pt-7 pb-9 before:absolute before:inset-0 before:shadow-iner before:rounded-xl shadow-box bg-secondary bg-card" >
+                            <div class="top bg-gray-50 h-64 mx-6 relative shadow-img-box rounded-xl">
+                                <!-- <img src="img/header/Layer 3.png" alt="layer 14" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl"> -->
+                            </div>
+                
+                            <div class="bottom px-6 font-semibold space-y-2 text-lg">
+                                <h3 class="text-white">Items Name</h3>
+                                <h4 class="text-gray-400">0.00 ETH</h4>
+                                <div class="flex justify-between">
+                                    <a href="" class="text-blue-10">Place a bid</a>
+                                    <div class="like flex items-center space-x-2">
+                                        <a href="" >
+                                            <img src="img/new items/Like 1.png" alt="hart" class="w-5 h-5">
+                                        </a>
+                                        <a href="" class="text-white font-semibold">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="elipse h-12 w-12 bg-white rounded-full absolute top-3 left-4">
+                                <div class="elipse_img"></div>
+                                <img class="small_elipse absolute bottom-0 right-0" src="img/new items/Ellipse 1.png" alt="small elipse">
+                            </div>
+                
+                            <div class="time border border-blue-400 flex items-center justify-center w-36 h-8 rounded-full text-white font-semibold absolute top-3 right-6 z-10" style="background: #232323;">
+                                2d 19h 30m 12s
+                            </div>
+                        </div>
+                        <div class="el h-items-card-h relative flex flex-col justify-between rounded-xl pt-7 pb-9 before:absolute before:inset-0 before:shadow-iner before:rounded-xl shadow-box bg-secondary bg-card" >
+                            <div class="top bg-gray-50 h-64 mx-6 relative shadow-img-box rounded-xl">
+                                <!-- <img src="img/header/Layer 3.png" alt="layer 14" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl"> -->
+                            </div>
+                
+                            <div class="bottom px-6 font-semibold space-y-2 text-lg">
+                                <h3 class="text-white">Items Name</h3>
+                                <h4 class="text-gray-400">0.00 ETH</h4>
+                                <div class="flex justify-between">
+                                    <a href="" class="text-blue-10">Place a bid</a>
+                                    <div class="like flex items-center space-x-2">
+                                        <a href="" >
+                                            <img src="img/new items/Like 1.png" alt="hart" class="w-5 h-5">
+                                        </a>
+                                        <a href="" class="text-white font-semibold">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="elipse h-12 w-12 bg-white rounded-full absolute top-3 left-4">
+                                <div class="elipse_img"></div>
+                                <img class="small_elipse absolute bottom-0 right-0" src="img/new items/Ellipse 1.png" alt="small elipse">
+                            </div>
+                
+                            <div class="time border border-blue-400 flex items-center justify-center w-36 h-8 rounded-full text-white font-semibold absolute top-3 right-6 z-10" style="background: #232323;">
+                                2d 19h 30m 12s
+                            </div>
+                        </div>
+                        <div class="el h-items-card-h relative flex flex-col justify-between rounded-xl pt-7 pb-9 before:absolute before:inset-0 before:shadow-iner before:rounded-xl shadow-box bg-secondary bg-card" >
+                            <div class="top bg-gray-50 h-64 mx-6 relative shadow-img-box rounded-xl">
+                                <!-- <img src="img/header/Layer 3.png" alt="layer 14" class="absolute inset-0 w-full h-full object-cover object-center rounded-xl"> -->
+                            </div>
+                
+                            <div class="bottom px-6 font-semibold space-y-2 text-lg">
+                                <h3 class="text-white">Items Name</h3>
+                                <h4 class="text-gray-400">0.00 ETH</h4>
+                                <div class="flex justify-between">
+                                    <a href="" class="text-blue-10">Place a bid</a>
+                                    <div class="like flex items-center space-x-2">
+                                        <a href="" >
+                                            <img src="img/new items/Like 1.png" alt="hart" class="w-5 h-5">
+                                        </a>
+                                        <a href="" class="text-white font-semibold">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="elipse h-12 w-12 bg-white rounded-full absolute top-3 left-4">
+                                <div class="elipse_img"></div>
+                                <img class="small_elipse absolute bottom-0 right-0" src="img/new items/Ellipse 1.png" alt="small elipse">
+                            </div>
+                
+                            <div class="time border border-blue-400 flex items-center justify-center w-36 h-8 rounded-full text-white font-semibold absolute top-3 right-6 z-10" style="background: #232323;">
+                                2d 19h 30m 12s
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="tranding" class="py-10  relative">
+                <div class="container max-w-desktop mx-auto px-14">
+                    <header class="text-center font-bold text-2xl mb-10">
+                        <h2 class="text-white">Trending in</h2>
+                        <h3 class="text-blue-400">all categories<span><img src="img/tranding/arrow.png" alt="arrow" class="inline ml-2"></span></h3>
+                    </header>
+    
+                    <!-- <div class="grid grid-cols-3 gap-14">
+                        <div class="el relative before:absolute before:inset-0 before:shadow-iner rounded-xl before:rounded-xl shadow-box bg-card">
+                            <div class="relative flex flex-col rounded-xl" style="height: 460px;">
+                                <div class="img" style="height: 230px;">
+                                    <img src="img/tranding/layer_1.png" alt="layer 14" class="h-full w-full object-center object-cover rounded-t-xl">
+                                </div>
+            
+                                <div class="text text-center mt-12 px-9">
+                                    <h2 class="text-white font-bold">Items Name</h2>
+                                    <h3 class="text-blue-400 font-bold mb-2">by Autor Name</h3>
+                                    <p class="text-sm text-gray-60">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                                    </p>
+                                </div>
+        
+                                <div class="cicle w-20 h-20 rounded-full bg-white absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                                    <img class="elipse absolute bottom-0 right-0" src="img/tranding/check.png" alt="Check">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el relative before:absolute before:inset-0 before:shadow-iner rounded-xl before:rounded-xl shadow-box bg-card">
+                            <div class="relative flex flex-col rounded-xl" style="height: 460px;">
+                                <div class="img" style="height: 230px;">
+                                    <img src="img/tranding/layer_2.png" alt="layer 14" class="h-full w-full object-center object-cover rounded-t-xl">
+                                </div>
+            
+                                <div class="text text-center mt-12 px-9">
+                                    <h2 class="text-white font-bold">Items Name</h2>
+                                    <h3 class="text-blue-400 font-bold mb-2">by Autor Name</h3>
+                                    <p class="text-sm text-gray-60">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                                    </p>
+                                </div>
+        
+                                <div class="cicle w-20 h-20 rounded-full bg-white absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                                    <img class="elipse absolute bottom-0 right-0" src="img/tranding/check.png" alt="Check">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el relative before:absolute before:inset-0 before:shadow-iner rounded-xl before:rounded-xl shadow-box bg-card">
+                            <div class="relative flex flex-col rounded-xl" style="height: 460px;">
+                                <div class="img" style="height: 230px;">
+                                    <img src="img/tranding/layer_3.png" alt="layer 14" class="h-full w-full object-center object-cover rounded-t-xl">
+                                </div>
+            
+                                <div class="text text-center mt-12 px-9">
+                                    <h2 class="text-white font-bold">Items Name</h2>
+                                    <h3 class="text-blue-400 font-bold mb-2">by Autor Name</h3>
+                                    <p class="text-sm text-gray-60">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                                    </p>
+                                </div>
+        
+                                <div class="cicle w-20 h-20 rounded-full bg-white absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                                    <img class="elipse absolute bottom-0 right-0" src="img/tranding/check.png" alt="Check">
+                                </div>
+                            </div>
+                        </div> 
+                    </div>      -->
+                    
+                    <!-- Slider main container -->
+                    <div class="swiper px-2" style="height: 550px; width: 100%;">
+                       
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="el relative before:absolute before:inset-0 before:shadow-iner rounded-xl before:rounded-xl shadow-box bg-card">
+                                    <div class="relative flex flex-col rounded-xl" style="height: 460px;">
+                                        <div class="img" style="height: 230px;">
+                                            <img src="img/tranding/layer_1.png" alt="layer 14" class="h-full w-full object-center object-cover rounded-t-xl">
+                                        </div>
+                    
+                                        <div class="text text-center mt-12 px-9">
+                                            <h2 class="text-white font-bold">Items Name</h2>
+                                            <h3 class="text-blue-400 font-bold mb-2">by Autor Name</h3>
+                                            <p class="text-sm text-gray-60">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                                            </p>
+                                        </div>
+                
+                                        <div class="cicle w-20 h-20 rounded-full bg-white absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                                            <img class="elipse absolute bottom-0 right-0" src="img/tranding/check.png" alt="Check">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="el relative before:absolute before:inset-0 before:shadow-iner rounded-xl before:rounded-xl shadow-box bg-card">
+                                    <div class="relative flex flex-col rounded-xl" style="height: 460px;">
+                                        <div class="img" style="height: 230px;">
+                                            <img src="img/tranding/layer_2.png" alt="layer 14" class="h-full w-full object-center object-cover rounded-t-xl">
+                                        </div>
+                    
+                                        <div class="text text-center mt-12 px-9">
+                                            <h2 class="text-white font-bold">Items Name</h2>
+                                            <h3 class="text-blue-400 font-bold mb-2">by Autor Name</h3>
+                                            <p class="text-sm text-gray-60">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                                            </p>
+                                        </div>
+                
+                                        <div class="cicle w-20 h-20 rounded-full bg-white absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                                            <img class="elipse absolute bottom-0 right-0" src="img/tranding/check.png" alt="Check">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="el relative before:absolute before:inset-0 before:shadow-iner rounded-xl before:rounded-xl shadow-box bg-card">
+                                    <div class="relative flex flex-col rounded-xl" style="height: 460px;">
+                                        <div class="img" style="height: 230px;">
+                                            <img src="img/tranding/layer_3.png" alt="layer 14" class="h-full w-full object-center object-cover rounded-t-xl">
+                                        </div>
+                    
+                                        <div class="text text-center mt-12 px-9">
+                                            <h2 class="text-white font-bold">Items Name</h2>
+                                            <h3 class="text-blue-400 font-bold mb-2">by Autor Name</h3>
+                                            <p class="text-sm text-gray-60">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                                            </p>
+                                        </div>
+                
+                                        <div class="cicle w-20 h-20 rounded-full bg-white absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                                            <img class="elipse absolute bottom-0 right-0" src="img/tranding/check.png" alt="Check">
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="el relative before:absolute before:inset-0 before:shadow-iner rounded-xl before:rounded-xl shadow-box bg-card">
+                                    <div class="relative flex flex-col rounded-xl" style="height: 460px;">
+                                        <div class="img" style="height: 230px;">
+                                            <img src="img/header/Layer 8.png" alt="layer 14" class="h-full w-full object-center object-cover rounded-t-xl">
+                                        </div>
+                    
+                                        <div class="text text-center mt-12 px-9">
+                                            <h2 class="text-white font-bold">Items Name</h2>
+                                            <h3 class="text-blue-400 font-bold mb-2">by Autor Name</h3>
+                                            <p class="text-sm text-gray-60">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                                            </p>
+                                        </div>
+                
+                                        <div class="cicle w-20 h-20 rounded-full bg-white absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                                            <img class="elipse absolute bottom-0 right-0" src="img/tranding/check.png" alt="Check">
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="el relative before:absolute before:inset-0 before:shadow-iner rounded-xl before:rounded-xl shadow-box bg-card">
+                                    <div class="relative flex flex-col rounded-xl" style="height: 460px;">
+                                        <div class="img" style="height: 230px;">
+                                            <img src="img/header/Layer 7.png" alt="layer 14" class="h-full w-full object-center object-cover rounded-t-xl">
+                                        </div>
+                    
+                                        <div class="text text-center mt-12 px-9">
+                                            <h2 class="text-white font-bold">Items Name</h2>
+                                            <h3 class="text-blue-400 font-bold mb-2">by Autor Name</h3>
+                                            <p class="text-sm text-gray-60">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                                            </p>
+                                        </div>
+                
+                                        <div class="cicle w-20 h-20 rounded-full bg-white absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                                            <img class="elipse absolute bottom-0 right-0" src="img/tranding/check.png" alt="Check">
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
+                    
+                        <!-- If we need navigation buttons -->
+                       
+                    
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                </div>
+
+                <div class="w-16 h-16 absolute left-0" style="top: 21rem;">
+                    <img src="img/tranding/button_left.png" alt="" class="swiper-button-prev w-full h-full" >
+                </div>
+                <div class="w-16 h-16 absolute  right-0" style="top: 21rem;">
+                    <img src="img/tranding/button_right.png" alt="" class="swiper-button-next w-full h-full" >
+                </div>
+            </section>
+    
+            <section id="create" class="pt-10 pb-32">            
+                <div class="container max-w-desktop mx-auto px-14">
+                    <h2 class="text-white font-bold text-2xl mb-6">Create and Sell Your NFTs</h2>
+    
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="el px-10 pt-8 relative overflow-hidden rounded-xl shadow-create-box" style="height: 270px;">
+                            <img src="img/create_and_sell/Shape 1.png" alt="shape">
+         
+                            <div>
+                                <h2 class="text-white font-bold text-lg mb-2 mt-3">Set up your wallet</h2>
+                                <p class="text-gray-60  text-sm">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                </p>
+                            </div>
+        
+                            <div class="bgImage absolute -bottom-4 -right-7 ">
+                                <img src="img/create_and_sell/Shape 1 copy.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="el px-10 pt-8 relative overflow-hidden rounded-xl shadow-create-box" style="height: 270px;">
+                            <img src="img/create_and_sell/pdf.pdf.png" alt="shape">
+        
+                            <div>
+                                <h2 class="text-white font-bold text-lg mb-2 mt-3">Add your NTFs</h2>
+                                <p class="text-gray-300 text-sm text-gray-60">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
+                                </p>
+                            </div>
+        
+                            <div class="bgImage absolute -bottom-6 -right-20 ">
+                                <img src="img/create_and_sell/Shape 2 copy.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="el px-10 pt-8 relative overflow-hidden rounded-xl shadow-create-box" style="height: 270px;">
+                            <img src="img/create_and_sell/Shape 3.png" alt="shape">
+        
+                            <div>
+                                <h2 class="text-white font-bold text-lg mb-2 mt-3">Sell your NTFs</h2>
+                                <p class="text-gray-300 text-sm text-gray-60">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
+                                </p>
+                            </div>
+        
+                            <div class="bgImage absolute -bottom-2 -right-4">
+                                <img src="img/create_and_sell/Shape 3 copy.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top pt-16 pb-12 relative before:absolute before:inset-0 before:shadow-iner shadow-footerTop-box bg-footer">
+            <div class="container max-w-desktop mx-auto px-14">
+                <div class="grid grid-cols-4 relative z-40">
+                    <div class="">
+                        <h2 class="text-white text-xl font-semibold mb-10">Marketplace</h2>
+                        <ul class="text-gray-400 space-y-4">
+                            <li><a href="">All NFTs</a></li>
+                            <li><a href="">Art</a></li>
+                            <li><a href="">Music</a></li>
+                            <li><a href="">Domain Names</a></li>
+                            <li><a href="">Virtual World</a></li>
+                            <li><a href="">Collectibles</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h2 class="text-white text-xl font-semibold mb-10">Resources</h2>
+                        <ul class="text-gray-400 space-y-4">
+                            <li><a href="">Help Center</a></li>
+                            <li><a href="">Partners</a></li>
+                            <li><a href="">Suggestions</a></li>
+                            <li><a href="">Discord</a></li>
+                            <li><a href="">Docs</a></li>
+                            <li><a href="">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h2 class="text-white text-xl font-semibold mb-10">Community</h2>
+                        <ul class="text-gray-400 space-y-4">
+                            <li><a href="">Community</a></li>
+                            <li><a href="">Documentation</a></li>
+                            <li><a href="">Brand Assets</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Forum</a></li>
+                            <li><a href="">Mailing List</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <div class="space-y-4">
+                            <h2 class="text-white text-xl font-semibold mb-10">Newsletter</h2>
+                            <p class="text-gray-400">
+                                Signup for our newsletter to get the latest news in your inbox.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex h-10">
+                                    <input type="text" name="email" id="email" placeholder="enter your email" class="w-4/6 rounded-l-full focus:outline-none p-3 bg-gray-70 placeholder:text-white">
+                                    <div class="arrow w-2/6 flex justify-center items-center bg-blue-400 rounded-r-full">
+                                        <img src="img/footer/Shape 4.svg" alt="arrow">
+                                    </div>
+                                </div>
+                                <p class="text-gray-400">
+                                    Your email is safe with us. We don't spam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom bg-secondary shadow-iner">
+            <div class="container max-w-desktop mx-auto px-14">
+                <div class="py-10 text-gray-400">
+                    <p>© Copyright 2021 - Prometheus.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/carousel.js"></script>
+</body>
+</html>
