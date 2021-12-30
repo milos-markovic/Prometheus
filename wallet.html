@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,62 +9,89 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="config.js"></script>
     <link rel="stylesheet" href="css/extend.css">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- alpine js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="font-primary">
     <header>
-        <div class="bg-header">
+        <div class="bg-light-footer dark:bg-header-wallet">
             <nav>
                 <div class="container max-w-desktop mx-auto">
-                    <div id="nav" class="flex justify-between items-center pl-14 pr-6 pt-5">
-                        <div class="left flex">
+                    <nav x-data="{ open: false }" id="nav" class="flex justify-between items-center pt-5 lg:pl-14 lg:pr-6">
+                        <div class="left flex items-center xs:ml-2 ml-6 lg:ml-0">
                             <div class="logo">
                                 <a href="">
-                                    <img src="img/header/logo/logo.svg" alt="Logo">
+                                    <img src="img/header/logo/logo.png" alt="Logo">
                                 </a>
                             </div>
         
-                            <input type="text" name="search" placeholder="search item heare..." class="search w-60 rounded-full pl-5 py-3 ml-6 bg-transparent placeholder-white w-search" style="background-color: #353535;">
+                            <input type="text" name="search" placeholder="search item heare..." class="search text-white rounded-full py-3 pl-5 bg-white dark:bg-gray-2 dark:opacity-70 placeholder-black dark:placeholder-white w-52 xl:w-[350px] ml-4">
                         </div>
         
-                        <div class="right flex text-white">
+                        <div class="right desktop-nav hidden lg:flex lg:items-center text-black dark:text-white">
                             <div class="nav">
                                 <ul class="flex space-x-2">
-                                    <li><a href="">Marketplace</a></li><span>|</span>
-                                    <li><a href="">Documents</a></li><span>|</span>
-                                    <li><a href="">Community</a></li><span>|</span>
+                                    <li><a href="">Marketplace</a></li><span class="hidden lg:block">|</span>
+                                    <li><a href="">Documents</a></li><span class="hidden lg:block">|</span>
+                                    <li><a href="">Community</a></li><span class="hidden lg:block">|</span>
                                     <li><a href="">Create</a></li>
                                 </ul>
                             </div>
         
-                            <div class="login ml-32">
+                            <div class="login ml-14 xl:ml-32">
                                 <ul class="flex space-x-6">
                                     <li><a href="">Profile</a></li>
                                     <li><a href="" class="bg-blue-10 px-4 py-2 text-white rounded-full" >Connect Wallet</a></li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+
+                        <span @click="open = ! open" class="text-white ml-5 mr-5 lg:mr-0 lg:hidden">
+                            <i class="fas fa-bars fa-2x"></i>
+                        </span>
+    
+                        <div x-show="open" @click.outside="open = false" class="right mob-nav flex flex-col lg:hidden text-white bg-black/75 px-6 py-10 mt-6 space-y-6 absolute top-16 w-full font-bold">
+                            <div class="nav">
+                                <ul class="flex flex-col space-y-2">
+                                    <li><a href="">Marketplace</a>
+                                    <li><a href="">Documents</a>
+                                    <li><a href="">Community</a>
+                                    <li><a href="">Create</a></li>
+                                </ul>
+                            </div>
+        
+                            <div class="login self-end">
+                                <ul class="flex space-x-6">
+                                    <li><a href="">Profile</a></li>
+                                    <li><a href="" class="bg-blue-10 px-4 py-2 text-white rounded-full" >Connect Wallet</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </nav>
             
-            <div class="h-wallet-h flex items-center justify-center">
-                <h1 class="text-center text-5xl font-bold text-white mt-50">Wallet</h1>
+            <div class="h-[200px] flex items-center justify-center">
+                <h1 class="text-center text-5xl font-bold text-dark dark:text-white mt-50">Wallet</h1>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="py-24" style="background-color: #1d1d1d;">
-            <div class="container max-w-desktop mx-auto px-14">
-                <div class="grid grid-cols-4 gap-6">
+    <main class="bg-light dark:bg-dark">
+        <section class="py-24">
+            <div class="container max-w-desktop mx-auto px-6 lg:px-14">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:lg:grid-cols-4 gap-6">
                     <div class="el">
-                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-card">
+                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-light-box dark:shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-gray-4 dark:bg-item-card">
                             <div class="img">
                                 <img src="img/wallet/MetaMask_Fox.png" alt="Meta mask">
                             </div>
     
                             <div class="text">
-                                <h2 class="mt-4 mb-2 text-white font-bold">Metamask</h2>
+                                <h2 class="mt-4 mb-2 text-black dark:text-white font-bold">Metamask</h2>
                                 <p class="text-gray-40">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                                 </p>
@@ -76,13 +103,13 @@
                         </div>
                     </div>
                     <div class="el">
-                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-card">
+                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-light-box dark:shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-gray-4 dark:bg-item-card">
                             <div class="img">
                                 <img src="img/wallet/Layer_1_transparent.png" alt="Meta mask">
                             </div>
     
                             <div class="text">
-                                <h2 class="mt-4 mb-2 text-white font-bold">Torus</h2>
+                                <h2 class="mt-4 mb-2 text-black dark:text-white font-bold">Torus</h2>
                                 <p class="text-gray-40">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                                 </p>
@@ -94,13 +121,13 @@
                         </div>
                     </div>
                     <div class="el">
-                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-card">
+                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-light-box dark:shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-gray-4 dark:bg-item-card">
                             <div class="img">
                                 <img src="img/wallet/Layer_2_transparent.png" alt="Meta mask">
                             </div>
     
                             <div class="text">
-                                <h2 class="mt-4 mb-2 text-white font-bold">TockenPocket</h2>
+                                <h2 class="mt-4 mb-2 text-black dark:text-white font-bold">TockenPocket</h2>
                                 <p class="text-gray-40">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                                 </p>
@@ -112,13 +139,13 @@
                         </div>
                     </div>
                     <div class="el">
-                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-card">
+                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-light-box dark:shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-gray-4 dark:bg-item-card">
                             <div class="img">
                                 <img src="img/wallet/authereum_shield.png" alt="Meta mask">
                             </div>
     
                             <div class="text">
-                                <h2 class="mt-4 mb-2 text-white font-bold">Authereum</h2>
+                                <h2 class="mt-4 mb-2 text-black dark:text-white font-bold">Authereum</h2>
                                 <p class="text-gray-40">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                                 </p>
@@ -130,13 +157,13 @@
                         </div>
                     </div>
                     <div class="el">
-                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-card">
+                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-light-box dark:shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-gray-4 dark:bg-item-card">
                             <div class="img">
                                 <img src="img/wallet/MetaMask_Fox.png" alt="Meta mask">
                             </div>
     
                             <div class="text">
-                                <h2 class="mt-4 mb-2 text-white font-bold">Metamask</h2>
+                                <h2 class="mt-4 mb-2 text-black dark:text-white font-bold">Metamask</h2>
                                 <p class="text-gray-40">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                                 </p>
@@ -148,13 +175,13 @@
                         </div>
                     </div>
                     <div class="el">
-                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-card">
+                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-light-box dark:shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-gray-4 dark:bg-item-card">
                             <div class="img">
                                 <img src="img/wallet/Layer_1_transparent.png" alt="Meta mask">
                             </div>
     
                             <div class="text">
-                                <h2 class="mt-4 mb-2 text-white font-bold">Torus</h2>
+                                <h2 class="mt-4 mb-2 text-black dark:text-white font-bold">Torus</h2>
                                 <p class="text-gray-40">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                                 </p>
@@ -166,13 +193,13 @@
                         </div>
                     </div>
                     <div class="el">
-                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-card">
+                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-light-box dark:shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-gray-4 dark:bg-item-card">
                             <div class="img">
                                 <img src="img/wallet/Layer_2_transparent.png" alt="Meta mask">
                             </div>
     
                             <div class="text">
-                                <h2 class="mt-4 mb-2 text-white font-bold">TockenPocket</h2>
+                                <h2 class="mt-4 mb-2 text-black dark:text-white font-bold">TockenPocket</h2>
                                 <p class="text-gray-40">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                                 </p>
@@ -184,13 +211,13 @@
                         </div>
                     </div>
                     <div class="el">
-                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-card">
+                        <div class="px-6 pt-8 pb-12 rounded-xl relative shadow-light-box dark:shadow-box before:absolute before:inset-0 before:shadow-iner before:rounded-xl bg-gray-4 dark:bg-item-card">
                             <div class="img">
                                 <img src="img/wallet/authereum_shield.png" alt="Meta mask">
                             </div>
     
                             <div class="text">
-                                <h2 class="mt-4 mb-2 text-white font-bold">Authereum</h2>
+                                <h2 class="mt-4 mb-2 text-black dark:text-white font-bold">Authereum</h2>
                                 <p class="text-gray-40">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                                 </p>
@@ -207,12 +234,12 @@
     </main>
 
     <footer>
-        <div class="footer-top pt-16 pb-12 relative before:absolute before:inset-0 before:shadow-iner shadow-footerTop-box bg-footer">
+        <div class="footer-top pt-16 pb-12 relative before:absolute before:inset-0 before:shadow-iner shadow-footerTop-box bg-light-footer dark:bg-footer">
             <div class="container max-w-desktop mx-auto px-14">
-                <div class="grid grid-cols-4 relative z-40">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 relative z-40 space-y-16 sm:space-y-0 text-center sm:text-left">
                     <div class="">
-                        <h2 class="text-white text-xl font-semibold mb-10">Marketplace</h2>
-                        <ul class="text-gray-400 space-y-4">
+                        <h2 class="text-black-10 dark:text-white text-xl font-semibold mb-10">Marketplace</h2>
+                        <ul class="text-gray-10 space-y-4">
                             <li><a href="">All NFTs</a></li>
                             <li><a href="">Art</a></li>
                             <li><a href="">Music</a></li>
@@ -222,8 +249,8 @@
                         </ul>
                     </div>
                     <div class="">
-                        <h2 class="text-white text-xl font-semibold mb-10">Resources</h2>
-                        <ul class="text-gray-400 space-y-4">
+                        <h2 class="text-black-10 dark:text-white text-xl font-semibold mb-10">Resources</h2>
+                        <ul class="text-gray-10 space-y-4">
                             <li><a href="">Help Center</a></li>
                             <li><a href="">Partners</a></li>
                             <li><a href="">Suggestions</a></li>
@@ -232,9 +259,9 @@
                             <li><a href="">Newsletter</a></li>
                         </ul>
                     </div>
-                    <div class="">
-                        <h2 class="text-white text-xl font-semibold mb-10">Community</h2>
-                        <ul class="text-gray-400 space-y-4">
+                    <div class="sm:pt-10 lg:pt-0">
+                        <h2 class="text-black-10 dark:text-white text-xl font-semibold mb-10">Community</h2>
+                        <ul class="text-gray-10 space-y-4">
                             <li><a href="">Community</a></li>
                             <li><a href="">Documentation</a></li>
                             <li><a href="">Brand Assets</a></li>
@@ -243,21 +270,21 @@
                             <li><a href="">Mailing List</a></li>
                         </ul>
                     </div>
-                    <div class="">
+                    <div class="sm:pt-10 lg:pt-0">
                         <div class="space-y-4">
-                            <h2 class="text-white text-xl font-semibold mb-10">Newsletter</h2>
-                            <p class="text-gray-400">
+                            <h2 class="text-black-10 dark:text-white text-xl font-semibold mb-10">Newsletter</h2>
+                            <p class="text-gray-10 text-left">
                                 Signup for our newsletter to get the latest news in your inbox.
                             </p>
                             <div class="space-y-4">
                                 <div class="flex h-10">
-                                    <input type="text" name="email" id="email" placeholder="enter your email" class="w-4/6 rounded-l-full focus:outline-none p-3 bg-gray-70 placeholder:text-white">
+                                    <input type="text" name="email" id="email" placeholder="enter your email" class="w-4/6 rounded-l-full focus:outline-none p-3 bg-gray-5 dark:bg-gray-70 placeholder:text-white">
                                     <div class="arrow w-2/6 flex justify-center items-center bg-blue-400 rounded-r-full">
                                         <img src="img/footer/Shape 4.svg" alt="arrow">
                                     </div>
                                 </div>
-                                <p class="text-gray-400">
-                                    Your email is safe with us. We don't spam.
+                                <p class="text-gray-10 text-left">
+                                    Your email is safe with us.<br> We don't spam.
                                 </p>
                             </div>
                         </div>
@@ -265,9 +292,9 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom bg-secondary shadow-iner">
+        <div class="footer-bottom bg-gray-4 dark:bg-dark shadow-iner">
             <div class="container max-w-desktop mx-auto px-14">
-                <div class="py-10 text-gray-400">
+                <div class="py-10 text-gray-10 xs:text-sm">
                     <p>© Copyright 2021 - Prometheus.com</p>
                 </div>
             </div>
